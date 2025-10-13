@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { Activity, Calendar, Users, LogIn, Menu } from "lucide-react";
+import { Activity, Calendar, Users, LogIn, Menu, X } from "lucide-react";
 
 
 export default function Navbar() {
@@ -39,19 +39,6 @@ export default function Navbar() {
 
                     {/* Desktop Actions */}
                     <div className="hidden md:flex items-center text-black space-x-3">
-                        {/* <Button variant="ghost" >
-                            <Link href="/login">
-                                <LogIn className="mr-2 h-4 w-4" />
-                                Login
-                            </Link>
-                        </Button>
-
-                        <Button asChild className="bg-gradient-primary hover:opacity-90 transition-smooth">
-                            <Link href="/appointments">
-                                <Calendar className="mr-2 h-4 w-4" />
-                                Book Now
-                            </Link>
-                        </Button> */}
                         <button className="flex items-center px-4 py-2 rounded-md hover:bg-[#3B82F6]  hover:text-white hover:opacity-90 transition-smooth text-gray-500">
                             <div className="mr-2">
                                 <LogIn className="h-4 w-4 mr-2" />
@@ -64,8 +51,6 @@ export default function Navbar() {
                             </div>
                             <span>Book Now</span>
                         </button>
-
-
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -73,13 +58,16 @@ export default function Navbar() {
                         onClick={() => setIsOpen(!isOpen)}
                         className="md:hidden p-2 hover:bg-muted rounded-lg text-black transition-colors"
                     >
-                        <Menu className="h-6 w-6" />
+                        {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                     </button>
                 </div>
 
                 {/* Mobile Menu */}
                 {isOpen && (
-                    <div className="md:hidden py-4 border-t text-black hover:text-white animate-fade-in">
+                    <div
+                        className="md:hidden fixed top-16 left-1/2 -translate-x-1/2 w-[90%] sm:w-[70%] h-[50vh] 
+               bg-white border shadow-lg rounded-xl text-black animate-slide-down overflow-y-auto"
+                    >
                         <div className="flex flex-col space-y-3">
                             <Link href="/home" className="py-2 px-4 hover:bg-muted rounded-lg transition-colors">
                                 Home
