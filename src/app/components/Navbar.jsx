@@ -23,7 +23,7 @@ export default function Navbar() {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-6">
-                        <Link href="/" className="text-black hover:text-primary transition-colors font-medium">
+                        <Link href="/home" className="text-black hover:text-primary transition-colors font-medium">
                             Home
                         </Link>
                         <Link href="/doctors" className="text-black hover:text-primary transition-colors font-medium">
@@ -79,9 +79,9 @@ export default function Navbar() {
 
                 {/* Mobile Menu */}
                 {isOpen && (
-                    <div className="md:hidden py-4 border-t text-black animate-fade-in">
+                    <div className="md:hidden py-4 border-t text-black hover:text-white animate-fade-in">
                         <div className="flex flex-col space-y-3">
-                            <Link href="/" className="py-2 px-4 hover:bg-muted rounded-lg transition-colors">
+                            <Link href="/home" className="py-2 px-4 hover:bg-muted rounded-lg transition-colors">
                                 Home
                             </Link>
                             <Link href="/doctors" className="py-2 px-4 hover:bg-muted rounded-lg transition-colors">
