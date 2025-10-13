@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+}
+
+@theme inline {
+  /* your theme colors (optional) */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* === THEME SETUP === */
+@theme inline {
+  /* Colors */
+  --color-primary: hsl(210 100% 48%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-primary-light: hsl(210 100% 92%);
+  --color-primary-dark: hsl(210 100% 38%);
+
+  --color-secondary: hsl(156 73% 42%);
+  --color-secondary-foreground: hsl(0 0% 100%);
+  --color-secondary-light: hsl(156 73% 92%);
+
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(210 24% 16%);
+  --color-muted: hsl(210 40% 96%);
+  --color-muted-foreground: hsl(210 16% 46%);
+
+  --color-accent: hsl(210 100% 56%);
+  --color-accent-foreground: hsl(0 0% 100%);
+
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+
+  --color-border: hsl(214 32% 91%);
+  --color-input: hsl(214 32% 91%);
+  --color-ring: hsl(210 100% 48%);
+
+  /* Border radius */
+  --radius-lg: 0.75rem;
+  --radius-md: calc(var(--radius-lg) - 2px);
+  --radius-sm: calc(var(--radius-lg) - 4px);
+
+  /* Shadows */
+  --shadow-glow: 0 0 24px hsl(210 100% 48% / 0.2);
+  --shadow-elegant: 0 8px 24px hsl(210 24% 16% / 0.12);
+
+  /* Transitions */
+  --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+/* === DARK MODE === */
+@media (prefers-color-scheme: dark) {
+  @theme inline {
+    --color-background: hsl(210 30% 8%);
+    --color-foreground: hsl(210 40% 98%);
+    --color-card: hsl(210 24% 12%);
+    --color-border: hsl(210 24% 20%);
+    --color-ring: hsl(210 100% 56%);
+    --color-muted: hsl(210 24% 16%);
+    --color-muted-foreground: hsl(215 20% 65%);
+  }
+}
+
+/* === BASE STYLES === */
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: system-ui, sans-serif;
+  @apply antialiased;
+}
+
+* {
+  @apply border-border;
+}
+
+/* === UTILITIES === */
+@utility transition-smooth {
+  transition: var(--transition-smooth);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility gradient-primary {
+  background: var(--gradient-primary);
+}
+
+@utility hover-lift {
+  transition: var(--transition-smooth);
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elegant);
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
