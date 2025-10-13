@@ -66,7 +66,7 @@ export default function Navbar() {
                 {isOpen && (
                     <div
                         className="md:hidden fixed top-16 left-1/2 -translate-x-1/2 w-[90%] sm:w-[70%] h-[50vh] 
-               bg-white border shadow-lg rounded-xl text-black animate-slide-down overflow-y-auto"
+               bg-white border shadow-lg rounded-xl text-black hover:text-white animate-slide-down overflow-y-auto"
                     >
                         <div className="flex flex-col space-y-3">
                             <Link href="/home" className="py-2 px-4 hover:bg-muted rounded-lg transition-colors">
