@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import heroHospital from "@/accets/hero-hospital.jpg";
+import Link from "next/link";
 
 const HeroSection = () => {
     return (
@@ -31,7 +32,10 @@ const HeroSection = () => {
 
                     {/* CTA Button */}
                     <div className="flex justify-center lg:justify-start">
-                        <button className="relative px-10 py-3 rounded-full font-semibold text-lg text-white bg-gradient-to-r from-emerald-400 via-teal-400 to-sky-500 shadow-md transition-all duration-500 hover:shadow-lg hover:scale-105 hover:from-sky-500 hover:to-emerald-400 focus:outline-none overflow-hidden">
+                        <Link
+                            href="/pages/doctors"
+                            className="relative px-10 py-3 rounded-full font-semibold text-lg text-white bg-gradient-to-r from-emerald-400 via-teal-400 to-sky-500 shadow-md transition-all duration-500 hover:shadow-lg hover:scale-105 hover:from-sky-500 hover:to-emerald-400 focus:outline-none overflow-hidden"
+                        >
                             <span className="relative z-10 flex items-center gap-2">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +54,7 @@ const HeroSection = () => {
                                 Find Doctors
                             </span>
                             <span className="absolute inset-0 bg-white/10 blur-sm opacity-0 hover:opacity-30 transition-opacity duration-500"></span>
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Stats Section */}

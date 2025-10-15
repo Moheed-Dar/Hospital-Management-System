@@ -23,16 +23,16 @@ export default function Navbar() {
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center space-x-6">
-                        <Link href="/home" className="text-gray-600 hover:text-primary transition-colors font-medium">
+                        <Link href="/pages/home" className="text-gray-600 hover:text-primary transition-colors font-medium">
                             Home
                         </Link>
-                        <Link href="/doctors" className="text-gray-600 hover:text-primary transition-colors font-medium">
+                        <Link href="/pages/doctors" className="text-gray-600 hover:text-primary transition-colors font-medium">
                             Doctors
                         </Link>
-                        <Link href="/appointments" className="text-gray-600 hover:text-primary transition-colors font-medium">
+                        <Link href="/pages/appointments" className="text-gray-600 hover:text-primary transition-colors font-medium">
                             Appointments
                         </Link>
-                        <Link href="/about" className="text-gray-600 hover:text-primary transition-colors font-medium">
+                        <Link href="/pages/about" className="text-gray-600 hover:text-primary transition-colors font-medium">
                             About
                         </Link>
                     </div>
@@ -45,12 +45,13 @@ export default function Navbar() {
                             </div>
                             <span>Login</span>
                         </button>
-                        <button className="flex items-center px-4 py-2 rounded-md hover:bg-[#3B82F6]  hover:text-white hover:opacity-90 transition-smooth text-gray-500">
-                            <div className="mr-2">
-                                <Calendar className="h-4 w-4 mr-2" />
-                            </div>
+                        <Link
+                            href="/pages/appointments"
+                            className="flex items-center px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-all"
+                        >
+                            <Calendar className="h-4 w-4 mr-2" />
                             <span>Book Now</span>
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
