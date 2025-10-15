@@ -8,7 +8,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="fixed top-0 w-full bg-white backdrop-blur-sm border-b border-border z-50 shadow-sm">
+        <nav className="fixed top-0 w-full bg-white backdrop-blur-sm z-50 shadow-sm">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
@@ -22,23 +22,23 @@ export default function Navbar() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-6">
-                        <Link href="/home" className="text-black hover:text-primary transition-colors font-medium">
+                    <div className="hidden lg:flex items-center space-x-6">
+                        <Link href="/home" className="text-gray-600 hover:text-primary transition-colors font-medium">
                             Home
                         </Link>
-                        <Link href="/doctors" className="text-black hover:text-primary transition-colors font-medium">
+                        <Link href="/doctors" className="text-gray-600 hover:text-primary transition-colors font-medium">
                             Doctors
                         </Link>
-                        <Link href="/appointments" className="text-black hover:text-primary transition-colors font-medium">
+                        <Link href="/appointments" className="text-gray-600 hover:text-primary transition-colors font-medium">
                             Appointments
                         </Link>
-                        <Link href="/about" className="text-black hover:text-primary transition-colors font-medium">
+                        <Link href="/about" className="text-gray-600 hover:text-primary transition-colors font-medium">
                             About
                         </Link>
                     </div>
 
                     {/* Desktop Actions */}
-                    <div className="hidden md:flex items-center text-black space-x-3">
+                    <div className="hidden lg:flex items-center text-black space-x-3">
                         <button className="flex items-center px-4 py-2 rounded-md hover:bg-[#3B82F6]  hover:text-white hover:opacity-90 transition-smooth text-gray-500">
                             <div className="mr-2">
                                 <LogIn className="h-4 w-4 mr-2" />
@@ -65,8 +65,8 @@ export default function Navbar() {
                 {/* Mobile Menu */}
                 {isOpen && (
                     <div
-                        className="md:hidden fixed top-16 left-1/2 -translate-x-1/2 w-[90%] sm:w-[70%] h-[50vh] 
-               bg-white border shadow-lg rounded-xl text-black hover:text-white animate-slide-down overflow-y-auto"
+                        className="lg:hidden fixed top-16 left-1/2 -translate-x-1/2 w-full  h-[80vh] 
+               bg-white  shadow-lg rounded-xl text-black hover:text-white animate-slide-down overflow-y-auto"
                     >
                         <div className="flex flex-col space-y-3">
                             <a className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
