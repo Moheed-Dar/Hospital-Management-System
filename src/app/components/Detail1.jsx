@@ -21,7 +21,7 @@ export default function Detail1() {
     ];
 
     return (
-        <section className="py-16 bg-[#fbfde6] text-center px-4 sm:px-6 lg:px-20">
+        <section className="py-16 bg-blue-50 text-center px-4 sm:px-6 lg:px-20">
             <h2 className="text-2xl sm:text-4xl font-bold text-gray-800 mb-3">
                 Why Choose MediCare?
             </h2>
