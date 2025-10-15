@@ -70,16 +70,16 @@ export default function Navbar() {
                bg-white  shadow-lg rounded-xl text-black hover:text-white animate-slide-down overflow-y-auto"
                     >
                         <div className="flex flex-col space-y-3">
-                            <a className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
+                            <a href='/pages/home' className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
                                 Home
                             </a>
-                            <a className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
+                            <a href="/pages/doctors" className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
                                 Doctors
                             </a>
-                            <a className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
+                            <a href="/pages/appointments" className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
                                 Appointments
                             </a>
-                            <a className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
+                            <a href="/pages/about" className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
                                 About
                             </a>
 
