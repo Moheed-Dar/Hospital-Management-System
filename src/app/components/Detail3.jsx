@@ -27,7 +27,7 @@ export default function Detail3() {
   ];
 
   return (
-    <div className="min-h-screen bg-white py-16 px-4">
+    <div className=" bg-gray-100 md:py-20 py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -40,12 +40,12 @@ export default function Detail3() {
         </div>
 
         {/* Doctors Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3  gap-8 max-w-6xl mx-auto">
           {/* Doctor Cards */}
           {doctors.map((doctor) => (
             <div
               key={doctor.id}
-              className="overflow-hidden shadow-sm shadow-gray-200 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="overflow-hidden shadow-sm shadow-gray-200 bg-white rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               <div className="relative overflow-hidden">
                 <Image
@@ -83,7 +83,7 @@ export default function Detail3() {
                 </div>
 
                 {/* Book Appointment Button */}
-                <button className="mt-3 w-full flex items-center hover:cursor-pointer justify-center gap-2 bg-blue-600 text-white font-medium py-2 rounded-lg hover:bg-green-600 transition-all">
+                <button className="mt-3 w-full flex items-center hover:cursor-pointer justify-center gap-2 bg-blue-400 text-white font-medium py-2 rounded-lg hover:bg-green-500 transition-all">
                   <Calendar className="w-5 h-5" />
                   Book Appointment
                 </button>
