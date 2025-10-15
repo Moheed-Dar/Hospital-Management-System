@@ -70,34 +70,56 @@ export default function Navbar() {
                bg-white  shadow-lg rounded-xl text-black hover:text-white animate-slide-down overflow-y-auto"
                     >
                         <div className="flex flex-col space-y-3">
-                            <a href='/pages/home' className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
+                            <a
+                                href="/pages/home"
+                                onClick={() => setIsOpen(false)}
+                                className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors"
+                            >
                                 Home
                             </a>
-                            <a href="/pages/doctors" className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
+                            <a
+                                href="/pages/doctors"
+                                onClick={() => setIsOpen(false)}
+                                className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors"
+                            >
                                 Doctors
                             </a>
-                            <a href="/pages/appointments" className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
+                            <a
+                                href="/pages/appointments"
+                                onClick={() => setIsOpen(false)}
+                                className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors"
+                            >
                                 Appointments
                             </a>
-                            <a href="/pages/about" className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors">
+                            <a
+                                href="/pages/about"
+                                onClick={() => setIsOpen(false)}
+                                className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors"
+                            >
                                 About
                             </a>
 
                             <div className="flex flex-col space-y-2 pt-2">
-                                <button className="flex items-center px-4 py-2 rounded-md hover:bg-[#3B82F6]  hover:text-white hover:opacity-90 transition-smooth text-gray-500">
+                                <button
+                                    onClick={() => setIsOpen(false)}
+                                    className="flex items-center px-4 py-2 rounded-md hover:bg-[#3B82F6] hover:text-white hover:opacity-90 transition-smooth text-gray-500"
+                                >
                                     <div className="mr-2">
                                         <LogIn className="h-4 w-4 mr-2" />
                                     </div>
                                     <span>Login</span>
                                 </button>
-                                <button className="flex items-center px-4 py-2 rounded-md hover:bg-[#3B82F6]  hover:text-white hover:opacity-90 transition-smooth text-gray-500">
-                                    <div className="mr-2">
-                                        <Calendar className="h-4 w-4 mr-2" />
-                                    </div>
+                                <a
+                                    href="/pages/appointments"
+                                    onClick={() => setIsOpen(false)}
+                                    className="flex items-center px-4 py-2 rounded-md hover:bg-[#3B82F6] hover:text-white hover:opacity-90 transition-smooth text-gray-500"
+                                >
+                                    <Calendar className="h-4 w-4 mr-2" />
                                     <span>Book Now</span>
-                                </button>
+                                </a>
                             </div>
                         </div>
+
                     </div>
                 )}
             </div>
