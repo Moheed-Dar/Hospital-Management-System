@@ -183,15 +183,15 @@ body {
   }
 }
 
-@keyframes pulse-glow {
+@keyframes hospital-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(34, 197, 94, 0.5), 0 0 40px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 10px rgba(94, 234, 212, 0.3), 0 0 25px rgba(56, 189, 248, 0.25);
   }
   50% {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(34, 197, 94, 0.4);
+    box-shadow: 0 0 18px rgba(94, 234, 212, 0.35), 0 0 35px rgba(56, 189, 248, 0.3);
   }
 }
 
-.animate-glow {
-  animation: pulse-glow 2s infinite ease-in-out;
+.animate-hospital-glow {
+  animation: hospital-glow 3s ease-in-out infinite;
 }
