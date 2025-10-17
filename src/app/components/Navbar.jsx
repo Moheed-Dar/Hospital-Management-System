@@ -23,7 +23,7 @@ export default function Navbar() {
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center space-x-6">
-                        <Link href="/pages/home" className="text-gray-600 hover:text-primary transition-colors font-medium">
+                        <Link href="/" className="text-gray-600 hover:text-primary transition-colors font-medium">
                             Home
                         </Link>
                         <Link href="/pages/doctors" className="text-gray-600 hover:text-primary transition-colors font-medium">
@@ -71,7 +71,7 @@ export default function Navbar() {
                     >
                         <div className="flex flex-col space-y-3">
                             <a
-                                href="/pages/home"
+                                href="/"
                                 onClick={() => setIsOpen(false)}
                                 className="py-2 px-4 text-gray-700 hover:bg-slate-400 hover:text-white rounded-lg transition-colors"
                             >

@@ -14,7 +14,7 @@ const LandingPage = () => {
         <Detail2/>
         <Detail3/>
         <Details4/>
-        <Footer/>
+        
     </div>
   )
 }
