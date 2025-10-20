@@ -7,14 +7,25 @@ import Link from "next/link";
 
 const HeroSection = () => {
     return (
-        <section className="bg-white flex flex-col items-center justify-center px-6 md:pt-24 pt-20 sm:px-10 md:px-16 lg:px-20 py-10  ">
+        <section className="bg-white flex flex-col items-center justify-center px-6 md:pt-24 pt-12 sm:px-10 md:px-16 lg:px-20 pb-10  ">
             <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center gap-12">
                 {/* Left Content */}
                 <div className="flex-1 w-full space-y-8 text-center lg:text-left">
                     {/* Trusted Provider Badge */}
-                    <span className="inline-block bg-blue-50 text-blue-600 px-5 py-2 rounded-full text-sm font-medium">
+                    <motion.span
+                        className="inline-block bg-blue-50 text-blue-600 px-5 py-2 rounded-full text-sm font-medium"
+                        animate={{
+                            y: [0, -10, 0], // moves up and down
+                        }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                        }}
+                    >
                         Trusted Healthcare Provider
-                    </span>
+                    </motion.span>
+
 
                     {/* Heading */}
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
