@@ -21,7 +21,7 @@ const HeroSection = () => {
                             duration: 2,
                             repeat: Infinity,
                             ease: "easeInOut",
-                        }}
+                        }}   
                     >
                         Trusted Healthcare Provider
                     </motion.span>
